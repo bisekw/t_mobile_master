@@ -56,6 +56,7 @@ public class FrameworkInitialize extends Base {
 
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 if (Settings.IS_REMOTE_RUN) {
+                    Settings.CHROME_VERSION="114.0";
                     driver = new RemoteWebDriver(new URL(Settings.GRID_URL), firefoxOptions);
                     DriverContext.setRemoteWebDriverThreadLocal(driver);
                 } else {
