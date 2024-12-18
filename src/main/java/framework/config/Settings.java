@@ -10,7 +10,7 @@ public class Settings {
     public static String TESTED_APP_URL;
     public static boolean IS_REMOTE_RUN;
     public static DriverType DRIVER_TYPE;
-    public static String GRID_URL ="http://localhost:4444/wd/hub";
+    public static String GRID_URL;
     public static String GRID_LOCAL = "http://localhost:4444/wd/hub";
     public static String GRID_REMOTE = "http://localhost:4444/wd/hub";
     public static String GRID_APPIUM_IOS = "http://192.168.1.19:4723/wd/hub"; //TBD

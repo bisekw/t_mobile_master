@@ -41,6 +41,7 @@ public class FrameworkInitialize extends Base {
             case CHROME: {
                 LoggingPreferences loggingPreferences = setLogs2All();
                 if (Settings.IS_REMOTE_RUN) {
+                    System.out.println("Initializing RemoteWebDriver with GRID_URL: " + Settings.GRID_URL);
                     driver = new RemoteWebDriver(new URL(Settings.GRID_URL), prepareChromeOptions());
                     DriverContext.setRemoteWebDriverThreadLocal(CHROME, driver);
                 } else {
