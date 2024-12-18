@@ -41,7 +41,7 @@ public class FrameworkInitialize extends Base {
             case CHROME: {
                 LoggingPreferences loggingPreferences = setLogs2All();
                 if (Settings.IS_REMOTE_RUN) {
-
+                    Settings.CHROME_VERSION="114.0";
                     driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), prepareChromeOptions());
                     DriverContext.setRemoteWebDriverThreadLocal(CHROME, driver);
                 } else {
@@ -56,7 +56,6 @@ public class FrameworkInitialize extends Base {
 
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 if (Settings.IS_REMOTE_RUN) {
-                    Settings.CHROME_VERSION="114.0";
                     driver = new RemoteWebDriver(new URL(Settings.GRID_URL), firefoxOptions);
                     DriverContext.setRemoteWebDriverThreadLocal(driver);
                 } else {
