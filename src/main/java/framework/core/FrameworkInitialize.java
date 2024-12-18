@@ -41,8 +41,8 @@ public class FrameworkInitialize extends Base {
             case CHROME: {
                 LoggingPreferences loggingPreferences = setLogs2All();
                 if (Settings.IS_REMOTE_RUN) {
-                    System.out.println("Initializing RemoteWebDriver with GRID_URL: " + Settings.GRID_URL);
-                    driver = new RemoteWebDriver(new URL(Settings.GRID_URL), prepareChromeOptions());
+
+                    driver = new RemoteWebDriver(new URL("http://selenium-hub:4444/wd/hub"), prepareChromeOptions());
                     DriverContext.setRemoteWebDriverThreadLocal(CHROME, driver);
                 } else {
                     WebDriverManager.chromedriver().setup();
